@@ -44,7 +44,12 @@ $(function() {
     });
 });
 
-
+function noRobot(e) {
+    var range = $(e).val();
+    if (range > 90){
+        $(e).val('100').prop('disabled', true).parents('.range').addClass('finish');
+    }
+}
 
 var swiperHome = new Swiper('.home-slider .swiper-container', {
     effect: 'fade',

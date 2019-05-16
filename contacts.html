@@ -9,6 +9,7 @@
     <link href="css/font.css" rel="stylesheet">
     <link href="css/reset.css" rel="stylesheet">
     <link href="css/swiper.min.css" rel="stylesheet">
+    <link href="css/jquery.fancybox.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -89,18 +90,61 @@
         </div>
         <div class="buttons-block-top just">
             <div class="flex">
-                <div class="btn btn-dark">Рассчитать стоимость</div>
-            <div class="btn btn-dark">Опросный лист</div>
+                <a href="" class="btn btn-dark">Рассчитать стоимость</a>
+                <a href="#feedback" data-fancybox data-options='{"touch" : false}' class="btn btn-dark" >Опросный лист</a>
             </div>
-            <div class="btn btn-yellow">Задать вопрос</div>
+            <a href="" class="btn btn-yellow">Задать вопрос</a>
         </div>
     </div>
+</div>
+
+
+<div class="modal-block" id="feedback">
+    <div class="title fz36">Обратная связь</div>
+    <form action="" class="form-style">
+        <div class="inputs-row">
+            <div class="column">
+                <div class="input-block">
+                    <input type="text" placeholder="Как Вас зовут?">
+                </div>
+                <div class="input-block">
+                    <input type="email" placeholder="У вас есть e-mail?">
+                </div>
+                <div class="input-block">
+                    <input type="text" placeholder="Укажите контактный телефон">
+                </div>
+            </div>
+            <div class="column">
+                <div class="input-block h100">
+                    <textarea placeholder="Напишите ваше сообщение..."></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="btn-row">
+            <div class="column">
+                <button class="btn btn-orange">Отправить</button>
+            </div>
+            <div class="column">
+                <div class="robot-row">
+                    <div class="not-robot">
+                        <div class="label">Я не робот</div>
+                        <div class="range">
+                            <input type="range" min="0" max="100" value="0" oninput="noRobot(this);" >
+                        </div>
+                        <div class="help">Перетащите ползунок вправо</div>
+                    </div>
+                    <a href="" class="politic-link">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </div>
+    </form>
 </div>
 
 
 
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/swiper.min.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
 <script src="js/main.js"></script>
 
 
