@@ -37,6 +37,11 @@ $(function() {
             scrollTop: 0
         }, 700);
     });
+
+    $('.contacts-page .address').on('click', function (e) {
+        $('.contacts-page .address').removeClass('active');
+        $(this).addClass('active');
+    });
 });
 
 
