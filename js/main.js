@@ -42,6 +42,13 @@ $(function() {
         $('.contacts-page .address').removeClass('active');
         $(this).addClass('active');
     });
+
+    $('[data-fancybox="images"]').fancybox({
+        infobar: false,
+        toolbar: false,
+        transitionEffect: 'slide',
+        baseClass: "images-fancy",
+    });
 });
 
 function noRobot(e) {
@@ -93,6 +100,39 @@ var swiperPartner = new Swiper('.partners-swiper .swiper-container', {
 });
 
 
+var swiperSerts = new Swiper('.serts-swiper .swiper-container', {
+    slidesPerView: 5,
+    spaceBetween: 30,
+    pagination: {
+        el: '.serts-swiper .swiper-pagination',
+        type: 'fraction',
+        renderFraction: function (currentClass, totalClass) {
+            return '<span class="' + currentClass + '"></span>' + ' <span class="sep">/</span> ' + '<span class="' + totalClass + '"></span>';
+        },
+        formatFractionCurrent: function (number) {
+            myNum = number + '-' + (number+4);
+            return myNum;
+        },
+        formatFractionTotal: function (number) {
+            myNum = number+4;
+            return myNum;
+        },
+    },
+    scrollbar: {
+        el: '.serts-swiper .swiper-scrollbar',
+        hide: false,
+    },
+    navigation: {
+        nextEl: '.serts-swiper .swiper-button-next',
+        prevEl: '.serts-swiper .swiper-button-prev',
+    },
+});
+
+
 function addZero(n) {
     return n.length > 1 ? n : (+n > 0) ? "0" + n : n;
 }
+
+
+
+
