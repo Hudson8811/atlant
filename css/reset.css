@@ -23,3 +23,33 @@ b, strong{
 i{
 	font-style: italic;
 }
+
+html{height:100%;}
+body{width:100%; min-height:100%; margin:0; padding:0;}
+h1, h2, h3, h4, h5, h6, p{display:block; margin:0; padding:0; font-weight:400; }
+img, input, textarea, button, a{border:none; outline:none; }
+table{border-spacing:0;}
+td{vertical-align:top; word-wrap:break-word;}
+ul, nav{margin:0; padding:0; list-style:none;}
+button{display:block; cursor:pointer;}
+.button:hover{transition: opacity 1.2s, visibility 0s linear 1.2s; opacity:0.6;}
+
+header, nav, section, article, aside, footer, main{display:block;}
+
+/*forms*/
+.inputbox::-webkit-input-placeholder{opacity: 1; transition: opacity 0.3s ease; color:#c6c5c5;}
+.inputbox::-moz-placeholder{opacity: 1; transition: opacity 0.3s ease; color:#c6c5c5;}
+.inputbox:-moz-placeholder{opacity: 1; transition: opacity 0.3s ease; color:#c6c5c5;}
+.inputbox:-ms-input-placeholder{opacity: 1; transition: opacity 0.3s ease; color:#c6c5c5;}
+.inputbox:focus::-webkit-input-placeholder{opacity: 0; transition: opacity 0.3s ease;}
+.inputbox:focus::-moz-placeholder{opacity: 0; transition: opacity 0.3s ease;}
+.inputbox:focus:-moz-placeholder{opacity: 0; transition: opacity 0.3s ease;}
+.inputbox:focus:-ms-input-placeholder{opacity: 0; transition: opacity 0.3s ease;}
+textarea::-webkit-input-placeholder{opacity: 1; transition: opacity 0.3s ease; color:#c6c5c5}
+textarea::-moz-placeholder{opacity: 1; transition: opacity 0.3s ease;color:#c6c5c5}
+textarea:-moz-placeholder{opacity: 1; transition: opacity 0.3s ease;color:#c6c5c5}
+textarea:-ms-input-placeholder{opacity: 1; transition: opacity 0.3s ease;color:#c6c5c5}
+textarea:focus::-webkit-input-placeholder{opacity: 0; transition: opacity 0.3s ease;}
+textarea:focus::-moz-placeholder{opacity: 0; transition: opacity 0.3s ease;}
+textarea:focus:-moz-placeholder{opacity: 0; transition: opacity 0.3s ease;}
+textarea:focus:-ms-input-placeholder{opacity: 0; transition: opacity 0.3s ease;}
