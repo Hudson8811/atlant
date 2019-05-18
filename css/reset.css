@@ -37,18 +37,18 @@ button{display:block; cursor:pointer;}
 header, nav, section, article, aside, footer, main{display:block;}
 
 /*forms*/
-.inputbox::-webkit-input-placeholder{opacity: 1; transition: opacity 0.3s ease; color:#c6c5c5;}
-.inputbox::-moz-placeholder{opacity: 1; transition: opacity 0.3s ease; color:#c6c5c5;}
-.inputbox:-moz-placeholder{opacity: 1; transition: opacity 0.3s ease; color:#c6c5c5;}
-.inputbox:-ms-input-placeholder{opacity: 1; transition: opacity 0.3s ease; color:#c6c5c5;}
+.inputbox::-webkit-input-placeholder{opacity: 1; transition: opacity 0.3s ease; color:#7D7D7D;}
+.inputbox::-moz-placeholder{opacity: 1; transition: opacity 0.3s ease; color:#7D7D7D;}
+.inputbox:-moz-placeholder{opacity: 1; transition: opacity 0.3s ease; color:#7D7D7D;}
+.inputbox:-ms-input-placeholder{opacity: 1; transition: opacity 0.3s ease; color:#7D7D7D;}
 .inputbox:focus::-webkit-input-placeholder{opacity: 0; transition: opacity 0.3s ease;}
 .inputbox:focus::-moz-placeholder{opacity: 0; transition: opacity 0.3s ease;}
 .inputbox:focus:-moz-placeholder{opacity: 0; transition: opacity 0.3s ease;}
 .inputbox:focus:-ms-input-placeholder{opacity: 0; transition: opacity 0.3s ease;}
-textarea::-webkit-input-placeholder{opacity: 1; transition: opacity 0.3s ease; color:#c6c5c5}
-textarea::-moz-placeholder{opacity: 1; transition: opacity 0.3s ease;color:#c6c5c5}
-textarea:-moz-placeholder{opacity: 1; transition: opacity 0.3s ease;color:#c6c5c5}
-textarea:-ms-input-placeholder{opacity: 1; transition: opacity 0.3s ease;color:#c6c5c5}
+textarea::-webkit-input-placeholder{opacity: 1; transition: opacity 0.3s ease; color:#7D7D7D}
+textarea::-moz-placeholder{opacity: 1; transition: opacity 0.3s ease;color:#7D7D7D}
+textarea:-moz-placeholder{opacity: 1; transition: opacity 0.3s ease;color:#7D7D7D}
+textarea:-ms-input-placeholder{opacity: 1; transition: opacity 0.3s ease;color:#7D7D7D}
 textarea:focus::-webkit-input-placeholder{opacity: 0; transition: opacity 0.3s ease;}
 textarea:focus::-moz-placeholder{opacity: 0; transition: opacity 0.3s ease;}
 textarea:focus:-moz-placeholder{opacity: 0; transition: opacity 0.3s ease;}

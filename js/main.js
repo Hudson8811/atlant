@@ -43,6 +43,11 @@ $(function() {
         $(this).addClass('active');
     });
 
+    $('.faq-main-block .toggle-title').on('click', function (e) {
+        $(this).toggleClass('active').siblings('.text').slideToggle();
+
+    });
+
     $('[data-fancybox="images"]').fancybox({
         infobar: false,
         transitionEffect: 'slide',
