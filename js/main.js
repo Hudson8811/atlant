@@ -43,6 +43,14 @@ $(function() {
         $(this).addClass('active');
     });
 
+    $('.cat-menu .level-1 > a.cat-link').on('click', function (e) {
+        event.preventDefault();
+        if (!$(this).parents('.level-1').hasClass('opened')){
+            $('.cat-menu .level-1').removeClass('opened').find('.cat-submenu').slideUp();
+            $(this).parents('.level-1').addClass('opened').find('.cat-submenu').slideDown();
+        }
+    });
+
     $('.faq-main-block .toggle-title').on('click', function (e) {
         $(this).toggleClass('active').siblings('.text').slideToggle();
 

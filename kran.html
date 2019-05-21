@@ -13,7 +13,7 @@
     <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body class="kran-page">
+<body>
 
 <header>
     <div class="container">
@@ -36,13 +36,13 @@
 </header>
 
 
-<div class="kran-content">
+<div class="kran-page">
     <div class="container">
         <div class="main-block">
             <div class="flex-block">
                 <div class="left-block">
                     <ul class="cat-menu">
-                        <li class="cat-item level-1 active">
+                        <li class="cat-item level-1 active opened">
                             <a href="" class="cat-link">Кран-балки</a>
                             <ul class="cat-submenu">
                                 <li class="cat-item level-2 active current"><a href="" class="cat-link">Кран-балка опорная</a></li>
@@ -84,13 +84,17 @@
                         </li>
                         <li class="cat-item level-1">
                             <a href="" class="cat-link">Крановые опции</a>
-                            <ul class="cat-submenu">
-                                <li class="cat-item level-2 active current"><a href="" class="cat-link"></a></li>
-                                <li class="cat-item level-2 active current"><a href="" class="cat-link"></a></li>
-                                <li class="cat-item level-2 active current"><a href="" class="cat-link"></a></li>
-                            </ul>
                         </li>
                     </ul>
+
+                    <div class="to-top">
+                        <div class="text">Вернуться	наверх</div>
+                        <div id="to-top">
+                            <svg width="24" height="32" viewBox="0 0 24 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.0607 0.939339C12.4749 0.353552 11.5251 0.353552 10.9393 0.939339L1.3934 10.4853C0.807612 11.0711 0.807612 12.0208 1.3934 12.6066C1.97919 13.1924 2.92893 13.1924 3.51472 12.6066L12 4.12132L20.4853 12.6066C21.0711 13.1924 22.0208 13.1924 22.6066 12.6066C23.1924 12.0208 23.1924 11.0711 22.6066 10.4853L13.0607 0.939339ZM13.5 32L13.5 2L10.5 2L10.5 32L13.5 32Z" fill="#C5C5C5"/>
+                            </svg>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="right-block">
@@ -98,7 +102,7 @@
                         <h1 class="page-title left-side">Кран-балка опорная</h1>
                         <a href="" class="scroll-link right-side">Характеристики</a>
                         <div class="select-custom left-side">
-                            <label for="select-1"></label>
+                            <label for="select-1">Грузоподъемность</label>
                             <select name="" id="select-1">
                                 <option value="1">1 т</option>
                             </select>
@@ -117,40 +121,134 @@
                             <div class="text">Кран мостовой однобалочный опорный представляет собой грузоподъёмный кран, состоящий из металлоконструкции, на которой установлен механизм подъёма — тельфер. Перемещаясь по крановым рельсовым путям, расположенным выше уровня пола, кран опорный обеспечивает перемещение груза на крюке в трёх взаимно перпендикулярных направлениях.</div>
                         </div>
                         <div class="right-side">
-                            <a href="images/jpg/kran-plan.jpg" data-fancybox class="img-zoom">
+                            <a href="images/jpg/kran-plan.jpg" data-fancybox class="img-plan">
                                 <img src="images/jpg/kran-plan.jpg" alt="">
                             </a>
                         </div>
                     </div>
                     <div class="row-2">
                         <div class="left-side">
-                            <div class="title-block">Характеристики</div>
-                            <div class="zoom-table">Увеличить таблицу</div>
-                            <table class="tech-table">
-                                <tr class="tr">
-                                    <td colspan="2">Грузоподъемность, т</td>
-                                    <td>1</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                                <tr class="tr">
-                                    <td colspan="2">Пролет крана L м</td>
-                                    <td>4,5</td>
-                                    <td>7,5</td>
-                                    <td>10,5</td>
-                                    <td>13,5</td>
-                                    <td>16,5</td>
-                                    <td>19,5</td>
-                                    <td>22,5</td>
-                                </tr>
-                            </table>
+                            <div class="flex-line">
+                                <div class="title-block">Характеристики</div>
+                                <div class="zoom-table">Увеличить таблицу</div>
+                            </div>
+                            <div class="table-outer">
+
+                                <table class="tech-table">
+                                    <tbody>
+                                        <tr>
+                                            <td colspan="2">Грузоподъемность, т</td>
+                                            <td>1</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">Пролет крана L м</td>
+                                            <td>4,5</td>
+                                            <td>7,5</td>
+                                            <td>10,5</td>
+                                            <td>13,5</td>
+                                            <td>16,5</td>
+                                            <td>19,5</td>
+                                            <td>22,5</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td colspan="2">Высота подъема крюка H,м</td>
+                                            <td>6…36</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Размеры, мм</td>
+                                            <td>
+                                                <table>
+                                                    <tbody>
+                                                    <tr><td>A min</td></tr>
+                                                    <tr><td>B min</td></tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                            <td>
+                                                <table>
+                                                    <tbody>
+                                                    <tr><td>1500</td></tr>
+                                                    <tr><td>1910</td></tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                            <td></td>
+                                            <td>
+                                                <table>
+                                                    <tbody>
+                                                    <tr><td>2000</td></tr>
+                                                    <tr><td>2410</td></tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                            <td></td>
+                                            <td>
+                                                <table>
+                                                    <tbody>
+                                                    <tr><td>2600</td></tr>
+                                                    <tr><td>3010</td></tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                            <td></td>
+                                            <td>
+                                                <table>
+                                                    <tbody>
+                                                    <tr><td>4000</td></tr>
+                                                    <tr><td>4410</td></tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td colspan="2">Группа режима работы крана по
+                                                ГОСТ 25546-82 (ISO 4301/1-86)</td>
+                                            <td colspan="7">3К (А3); 4К(А4); 5К(А5)</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Скорость, м/с</td>
+                                            <td>
+                                                <table>
+                                                    <tbody>
+                                                    <tr><td>подъема тали</td></tr>
+                                                    <tr><td>зависит от типа электротали</td></tr>
+                                                    <tr><td>передвижение тали</td></tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                            <td colspan="7">
+                                                <table>
+                                                    <tbody>
+                                                    <tr><td>зависит от типа электротали</td></tr>
+                                                    <tr><td>зависит от типа электротали</td></tr>
+                                                    <tr><td>0,35; 0,4; 0,5 (от 0 до номинальной скорости — с установкой преобразователя частоты с функциями плавный разгон/торможение)</td></tr>
+                                                    </tbody>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
                         </div>
                         <div class="right-side">
-                            <div class="block-1">
+                            <div class="block-1 item">
                                 <div class="title">ДОПОЛНИТЕЛЬНЫЕ ОПЦИИ ДЛЯ КРАНА:</div>
                                 <div class="text">
                                     <ul>
@@ -163,7 +261,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="block-2">
+                            <div class="block-2 item">
                                 <div class="title">ДОПОЛНИТЕЛЬНЫЕ ОПЦИИ ДЛЯ ЭЛЕКТРОТАЛИ:</div>
                                 <div class="text">
                                     <ul>
@@ -183,7 +281,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="block-3">
+                            <div class="block-3 item">
                                 <div class="text">
                                     <p>*Суммарная мощность крана будет не более 3 кВт, если рассчитывать на электроталь про-ва России либо Болгарии.</p>
                                     <p>**Указан стандартный размер. Данный размер по требованию заказчика может быть уменьшен.</p>
@@ -218,37 +316,33 @@
                 </div>
             </div>
             <div class="go-top-row">
-                <div class="to-top">
-                    <div class="text">Вернуться	наверх</div>
-                    <div id="to-top">
-                        <svg width="24" height="32" viewBox="0 0 24 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M13.0607 0.939339C12.4749 0.353552 11.5251 0.353552 10.9393 0.939339L1.3934 10.4853C0.807612 11.0711 0.807612 12.0208 1.3934 12.6066C1.97919 13.1924 2.92893 13.1924 3.51472 12.6066L12 4.12132L20.4853 12.6066C21.0711 13.1924 22.0208 13.1924 22.6066 12.6066C23.1924 12.0208 23.1924 11.0711 22.6066 10.4853L13.0607 0.939339ZM13.5 32L13.5 2L10.5 2L10.5 32L13.5 32Z" fill="#C5C5C5"/>
-                        </svg>
-                    </div>
-                </div>
             </div>
         </div>
         <div class="recommended-block">
             <div class="block-title">Рекомендуем ознакомиться:</div>
             <div class="flex-block">
                 <div class="item">
-                    <div class="title">Кран-балка опорная 2 т</div>
-                    <a href="" class="link">
-                        <span>Посмотреть</span>
-                        <svg width="31" height="9" viewBox="0 0 31 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M30.8536 4.85355C31.0488 4.65829 31.0488 4.34171 30.8536 4.14645L27.6716 0.964466C27.4763 0.769204 27.1597 0.769204 26.9645 0.964466C26.7692 1.15973 26.7692 1.47631 26.9645 1.67157L29.7929 4.5L26.9645 7.32843C26.7692 7.52369 26.7692 7.84027 26.9645 8.03553C27.1597 8.2308 27.4763 8.2308 27.6716 8.03553L30.8536 4.85355ZM0.5 5L30.5 5V4L0.5 4L0.5 5Z" fill="white"/>
-                        </svg>
-                    </a>
+                    <div class="text-block">
+                        <div class="title">Кран-балка опорная 2 т</div>
+                        <a href="" class="link">
+                            <span>Посмотреть</span>
+                            <svg width="31" height="9" viewBox="0 0 31 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M30.8536 4.85355C31.0488 4.65829 31.0488 4.34171 30.8536 4.14645L27.6716 0.964466C27.4763 0.769204 27.1597 0.769204 26.9645 0.964466C26.7692 1.15973 26.7692 1.47631 26.9645 1.67157L29.7929 4.5L26.9645 7.32843C26.7692 7.52369 26.7692 7.84027 26.9645 8.03553C27.1597 8.2308 27.4763 8.2308 27.6716 8.03553L30.8536 4.85355ZM0.5 5L30.5 5V4L0.5 4L0.5 5Z" fill="white"/>
+                            </svg>
+                        </a>
+                    </div>
                     <div class="img-block"><img src="images/png/kran-1.png" alt=""></div>
                 </div>
                 <div class="item">
-                    <div class="title">Кран-балка опорная 2 т</div>
-                    <a href="" class="link">
-                        <span>Посмотреть</span>
-                        <svg width="31" height="9" viewBox="0 0 31 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M30.8536 4.85355C31.0488 4.65829 31.0488 4.34171 30.8536 4.14645L27.6716 0.964466C27.4763 0.769204 27.1597 0.769204 26.9645 0.964466C26.7692 1.15973 26.7692 1.47631 26.9645 1.67157L29.7929 4.5L26.9645 7.32843C26.7692 7.52369 26.7692 7.84027 26.9645 8.03553C27.1597 8.2308 27.4763 8.2308 27.6716 8.03553L30.8536 4.85355ZM0.5 5L30.5 5V4L0.5 4L0.5 5Z" fill="white"/>
-                        </svg>
-                    </a>
+                    <div class="text-block">
+                        <div class="title">Кран-балка опорная 2 т</div>
+                        <a href="" class="link">
+                            <span>Посмотреть</span>
+                            <svg width="31" height="9" viewBox="0 0 31 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M30.8536 4.85355C31.0488 4.65829 31.0488 4.34171 30.8536 4.14645L27.6716 0.964466C27.4763 0.769204 27.1597 0.769204 26.9645 0.964466C26.7692 1.15973 26.7692 1.47631 26.9645 1.67157L29.7929 4.5L26.9645 7.32843C26.7692 7.52369 26.7692 7.84027 26.9645 8.03553C27.1597 8.2308 27.4763 8.2308 27.6716 8.03553L30.8536 4.85355ZM0.5 5L30.5 5V4L0.5 4L0.5 5Z" fill="white"/>
+                            </svg>
+                        </a>
+                    </div>
                     <div class="img-block"><img src="images/png/kran-1.png" alt=""></div>
                 </div>
             </div>
