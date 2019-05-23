@@ -91,6 +91,66 @@ $(function() {
             });
         }
     });
+
+
+    $('[data-fancybox="calc"]').fancybox({
+        infobar: false,
+        transitionEffect: 'fade',
+        baseClass: "images-fancy",
+        toolbar: true,
+        smallBtn: false,
+        touch: false,
+        clickSlide: false,
+        clickOutside: false,
+        buttons: [
+            "close"
+        ],
+        btnTpl: {
+            close:
+                '<button data-fancybox-close class="fancybox-button fancybox-button--close">' +
+                '<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M26.4561 1L1.00021 26.4558" stroke="white" stroke-width="2"/><path d="M26.4561 26.4561L1.00021 1.00021" stroke="white" stroke-width="2"/></svg>' +
+                "</button>"
+
+        },
+        thumbs : {
+            autoStart : false,
+            axis      : 'x'
+        },
+    });
+
+
+    $('#calc .slide-1 .cat-menu label').on('click', function (e) {
+        event.preventDefault();
+        var data = $(this).data('id');
+        $('#calc .slide-1 li').removeClass('current');
+        $(this).closest('li').addClass('current');
+        $('#calc .slide-1 img').removeClass('active')
+        $('#calc .slide-1 img[data-id="'+ data +'"]').addClass('active');
+    });
+
+    $('#calc .label-row  label').on('click', function (e) {
+        event.preventDefault();
+        $('#calc .label-row  label').removeClass('active');
+        $(this).addClass('active');
+    });
+
+    $('#calc .slide-5 input').on('focus', function (e) {
+        $(this).closest('.input-item').addClass('active');
+    });
+    $('#calc .slide-5 input').on('focusout', function (e) {
+        $(this).closest('.input-item').removeClass('active');
+    });
+    $('#calc .slide-5 input').bind("change keyup input click", function() {
+        if (this.value.match(/[^0-9]/g)) {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        }
+    });
+
+    $('#calc .go-first').on("click", function() {
+        swiperCalc.slideTo(0);
+        $('#calc .control').show();
+    });
+
 });
 
 
@@ -179,5 +239,27 @@ function addZero(n) {
 }
 
 
-
+var swiperCalc = new Swiper('#calc .swiper-container', {
+    effect: 'fade',
+    allowTouchMove: false,
+    touchRatio: 0,
+    pagination: {
+        el: '#calc .swiper-pagination',
+        dynamicBullets: true,
+        clickable: false,
+        dynamicMainBullets: 1,
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + addZero(index + 1) + '</span>';
+        },
+    },
+    navigation: {
+        nextEl: '#calc .swiper-button-next2',
+        prevEl: '#calc .swiper-button-prev2',
+    },
+    on: {
+        reachEnd: function () {
+            $('#calc .control').hide();
+        },
+    }
+});
 

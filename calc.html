@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/font.css" rel="stylesheet">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/swiper.min.css" rel="stylesheet">
+    <link href="css/jquery.fancybox.css" rel="stylesheet">
+    <link href="css/ion.rangeSlider.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <div class="logo-line">
+            <a href="" class="logo"><img src="images/svg/logo-header.svg" alt=""></a>
+            <div class="title">Производство кранов <span class="orange">и металлоконструкций</span></div>
+        </div>
+        <div class="menu-line">
+            <div class="menu-btn menu-item"><img src="images/png/mobile-menu.png" alt=""></div>
+            <div class="menu">
+                <a href="" class="menu-item">О компании</a>
+                <a href="" class="menu-item">Услуги</a>
+                <a href="" class="menu-item">Цены</a>
+                <a href="" class="menu-item">Как купить</a>
+                <a href="" class="menu-item border">Сертификаты</a>
+                <a href="" class="menu-item">Контакты</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div class="calc-page">
+    <div class="container">
+        <div class="main-content">
+            <div class="left-block">
+                <div class="title"><span class="orange">Калькулятор</span> расчета стоимости</div>
+                <div class="text"><strong>Пройдя 11 шагов,</strong> Вы сможете увидеть точную стоимость на крановое оборудование, а также стоимость дополнительных опций и услуг.</div>
+                <div class="btn btn-orange" data-fancybox="calc" data-src="#calc">Выполнить просчет</div>
+                <img src="images/png/calc-man.png" alt="" class="man">
+            </div>
+            <div class="right-block">
+                <div class="title">Калькулятор поможет рассчитать Вам:</div>
+                <ul class="list">
+                    <li>Стоимость опорного или подвесного мостового однобалочного крана, с грузоподъёмностью до 16 т.</li>
+                    <li>Стоимость тали, и множества дополнительный опций крана</li>
+                    <li>Стоимость проектирования, поставки рельса / путей крана, доставки, монтажа и других услуг</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal_block" id="calc">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide slide-1">
+                <div class="block-title">Выберите тип крана</div>
+                <div class="main-block">
+                    <input type="radio" name="r_kran" id="r_kran_1" value="1">
+                    <input type="radio" name="r_kran" id="r_kran_2" value="2">
+                    <input type="radio" name="r_kran" id="r_kran_3" value="3">
+
+                    <ul class="cat-menu">
+                        <li class="cat-item level-1 active opened">
+                            <a href="" class="cat-link">Кран-балки</a>
+                            <ul class="cat-submenu">
+                                <li class="cat-item level-2 active current"><label for="r_kran_1" data-id="1"  class="cat-link">Кран-балка опорная</label></li>
+                                <li class="cat-item level-2 active"><label for="r_kran_2" data-id="2"   class="cat-link">Кран-балка подвесная</label></li>
+                                <li class="cat-item level-2 active"><label for="r_kran_3" data-id="3"   class="cat-link">Кран-балки ручные</label></li>
+                            </ul>
+                        </li>
+                        <li class="cat-item level-1">
+                            <a href="" class="cat-link">Краны мостовые</a>
+                            <ul class="cat-submenu">
+                                <li class="cat-item level-2 active "><label for="r_kran_1" data-id="1" class="cat-link">Кран-балка опорная</label></li>
+                                <li class="cat-item level-2 active"><label for="r_kran_2"  data-id="2" class="cat-link">Кран-балка подвесная</label></li>
+                                <li class="cat-item level-2 active"><label for="r_kran_3"  data-id="3" class="cat-link">Кран-балки ручные</label></li>
+                            </ul>
+                        </li>
+                        <li class="cat-item level-1">
+                            <a href="" class="cat-link">Козловые краны</a>
+                            <ul class="cat-submenu">
+                                <li class="cat-item level-2 active "><label for="r_kran_1" class="cat-link">Кран-балка опорная</label></li>
+                                <li class="cat-item level-2 active"><label for="r_kran_2"  class="cat-link">Кран-балка подвесная</label></li>
+                                <li class="cat-item level-2 active"><label for="r_kran_3"  class="cat-link">Кран-балки ручные</label></li>
+                            </ul>
+                        </li>
+                        <li class="cat-item level-1">
+                            <a href="" class="cat-link">Консольные краны</a>
+                            <ul class="cat-submenu">
+                                <li class="cat-item level-2 active "><label for="r_kran_1" class="cat-link">Кран-балка опорная</label></li>
+                                <li class="cat-item level-2 active"><label for="r_kran_2"  class="cat-link">Кран-балка подвесная</label></li>
+                                <li class="cat-item level-2 active"><label for="r_kran_3"  class="cat-link">Кран-балки ручные</label></li>
+                            </ul>
+                        </li>
+                        <li class="cat-item level-1">
+                            <a href="" class="cat-link">Тельферы</a>
+                            <ul class="cat-submenu">
+                                <li class="cat-item level-2 active "><label for="r_kran_1" class="cat-link">Кран-балка опорная</label></li>
+                                <li class="cat-item level-2 active"><label for="r_kran_2"  class="cat-link">Кран-балка подвесная</label></li>
+                                <li class="cat-item level-2 active"><label for="r_kran_3"  class="cat-link">Кран-балки ручные</label></li>
+                            </ul>
+                        </li>
+                        <li class="cat-item level-1">
+                            <a href="" class="cat-link">Крановые опции</a>
+                            <ul class="cat-submenu">
+                                <li class="cat-item level-2 active "><label for="r_kran_1" class="cat-link">Кран-балка опорная</label></li>
+                                <li class="cat-item level-2 active"><label for="r_kran_2"  class="cat-link">Кран-балка подвесная</label></li>
+                                <li class="cat-item level-2 active"><label for="r_kran_3"  class="cat-link">Кран-балки ручные</label></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="images">
+                        <img data-id="1" src="images/jpg/kran-bg.jpg" class="active" alt="">
+                        <img data-id="2" src="images/png/kran-balka.png" alt="">
+                        <img data-id="3" src="images/jpg/kran-bg.jpg" alt="">
+                    </div>
+                </div>
+                <div class="more-row">
+                    <div class="more-text">Подвешивается к крановым путям снизу.</div>
+                    <a href="" class="more-link">
+                        <span>Подробнее о кране</span>
+                        <svg width="46" height="16" viewBox="0 0 46 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M45.7071 8.70711C46.0976 8.31658 46.0976 7.68342 45.7071 7.29289L39.3431 0.928932C38.9526 0.538408 38.3195 0.538408 37.9289 0.928932C37.5384 1.31946 37.5384 1.95262 37.9289 2.34315L43.5858 8L37.9289 13.6569C37.5384 14.0474 37.5384 14.6805 37.9289 15.0711C38.3195 15.4616 38.9526 15.4616 39.3431 15.0711L45.7071 8.70711ZM0 9H45V7H0V9Z" fill="#4B4848"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide-2">
+                <div class="block-title">Укажите исполнение крана</div>
+                <div class="main-block">
+
+                    <input type="radio" name="type" value="1" checked class="radio-hide" id="r_type_1">
+                    <input type="radio" name="type" value="2" class="radio-hide" id="r_type_2">
+                    <input type="radio" name="type" value="3" class="radio-hide" id="r_type_3">
+
+                    <div class="label-row">
+                        <label for="r_type_1" class="active">
+                            <span class="image-block">
+                                <img src="images/png/kran-type-1.png" alt="">
+                            </span>
+                            <span class="title">Общепромышленное</span>
+                        </label>
+                        <label for="r_type_2">
+                            <span class="image-block">
+                                <img src="images/png/kran-type-2.png" alt="">
+                            </span>
+                            <span class="title">Взрывобезопасное</span>
+                        </label>
+                        <label for="r_type_3">
+                            <span class="image-block">
+                                <img src="images/png/kran-type-3.png" alt="">
+                            </span>
+                            <span class="title">Пожаробезопасное</span>
+                        </label>
+                    </div>
+
+                </div>
+                <div class="more-row">
+                    <div class="more-text">Применяется в общепромышленных, безопасных зонах.</div>
+                    <a href="" class="more-link">
+                        <span>Подробнее</span>
+                        <svg width="46" height="16" viewBox="0 0 46 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M45.7071 8.70711C46.0976 8.31658 46.0976 7.68342 45.7071 7.29289L39.3431 0.928932C38.9526 0.538408 38.3195 0.538408 37.9289 0.928932C37.5384 1.31946 37.5384 1.95262 37.9289 2.34315L43.5858 8L37.9289 13.6569C37.5384 14.0474 37.5384 14.6805 37.9289 15.0711C38.3195 15.4616 38.9526 15.4616 39.3431 15.0711L45.7071 8.70711ZM0 9H45V7H0V9Z" fill="#4B4848"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide-3">
+                <div class="block-title">Укажите тип управления крана</div>
+                <div class="main-block">
+                    <input type="radio" name="type" value="1" checked class="radio-hide" id="r_u_1">
+                    <input type="radio" name="type" value="2" class="radio-hide" id="r_u_2">
+
+                    <div class="label-row items-2">
+                        <label for="r_u_1" class="active">
+                            <span class="image-block">
+                                <img src="images/png/kran-u-1.png" alt="">
+                            </span>
+                            <span class="title">Ручное</span>
+                        </label>
+                        <label for="r_u_2">
+                            <span class="image-block">
+                                <img src="images/png/kran-u-2.png" alt="">
+                            </span>
+                            <span class="title">Электрическое</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="more-row">
+                    <div class="more-text">Применяется в общепромышленных, безопасных зонах.</div>
+                    <a href="" class="more-link">
+                        <span>Подробнее</span>
+                        <svg width="46" height="16" viewBox="0 0 46 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M45.7071 8.70711C46.0976 8.31658 46.0976 7.68342 45.7071 7.29289L39.3431 0.928932C38.9526 0.538408 38.3195 0.538408 37.9289 0.928932C37.5384 1.31946 37.5384 1.95262 37.9289 2.34315L43.5858 8L37.9289 13.6569C37.5384 14.0474 37.5384 14.6805 37.9289 15.0711C38.3195 15.4616 38.9526 15.4616 39.3431 15.0711L45.7071 8.70711ZM0 9H45V7H0V9Z" fill="#4B4848"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide-4">
+                <div class="block-title">Грузоподъемность</div>
+                <div class="main-block">
+                    <input type="radio" name="type" value="1" checked class="radio-hide" id="r_g_1">
+                    <input type="radio" name="type" value="2" class="radio-hide" id="r_g_2">
+                    <input type="radio" name="type" value="3" class="radio-hide" id="r_g_3">
+                    <input type="radio" name="type" value="4" class="radio-hide" id="r_g_4">
+                    <input type="radio" name="type" value="5" class="radio-hide" id="r_g_5">
+                    <input type="radio" name="type" value="6" class="radio-hide" id="r_g_6">
+
+                    <div class="label-row">
+                        <label for="r_g_1" class="active">
+                            <span class="title">500 кг</span>
+                        </label>
+                        <label for="r_g_2">
+                            <span class="title">1000 кг</span>
+                        </label>
+                        <label for="r_g_3">
+                            <span class="title">2000 кг</span>
+                        </label>
+                        <label for="r_g_4">
+                            <span class="title">3200 кг</span>
+                        </label>
+                        <label for="r_g_5">
+                            <span class="title">5000 кг</span>
+                        </label>
+                        <label for="r_g_6">
+                            <span class="title">10000 кг</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="more-row">
+                    <div class="more-text">Применяется в общепромышленных, безопасных зонах.</div>
+                    <a href="" class="more-link">
+                        <span>Подробнее</span>
+                        <svg width="46" height="16" viewBox="0 0 46 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M45.7071 8.70711C46.0976 8.31658 46.0976 7.68342 45.7071 7.29289L39.3431 0.928932C38.9526 0.538408 38.3195 0.538408 37.9289 0.928932C37.5384 1.31946 37.5384 1.95262 37.9289 2.34315L43.5858 8L37.9289 13.6569C37.5384 14.0474 37.5384 14.6805 37.9289 15.0711C38.3195 15.4616 38.9526 15.4616 39.3431 15.0711L45.7071 8.70711ZM0 9H45V7H0V9Z" fill="#4B4848"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide-5">
+                <div class="block-title">Введите параметры</div>
+                <div class="main-block">
+                    <div class="flex-inputs">
+                        <div class="input-item">
+                            <div class="img-block">
+                                <img src="images/png/kran-p-1.png" alt="">
+                            </div>
+                            <div class="input-block">
+                                <div class="label">Длина путей</div>
+                                <input type="text" name="input_1">
+                            </div>
+                        </div>
+                        <div class="input-item">
+                            <div class="img-block">
+                                <img src="images/png/kran-p-2.png" alt="">
+                            </div>
+                            <div class="input-block">
+                                <div class="label">Ширина между путями</div>
+                                <input type="text" name="input_2">
+                            </div>
+                        </div>
+                        <div class="input-item">
+                            <div class="img-block">
+                                <img src="images/png/kran-p-3.png" alt="">
+                            </div>
+                            <div class="input-block">
+                                <div class="label">Высота путей</div>
+                                <input type="text" name="input_3">
+                            </div>
+                        </div>
+                        <div class="input-item">
+                            <div class="img-block">
+                                <img src="images/png/kran-p-4.png" alt="">
+                            </div>
+                            <div class="input-block">
+                                <div class="label">Высота до перекрытий (потолка)</div>
+                                <input type="text" name="input_4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="more-row">
+                    <div class="more-text"><img src="images/svg/warning.svg" alt="">Расстояние от стены до центра рельса не должно быть меньше 350 мм</div>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide-6">
+                <div class="block-title">Укажите температурный диапазон для места размещения</div>
+                <div class="main-block">
+                    <div class="range-block">
+                        <input type="text" class="js-range-slider" name="r_range" value="" />
+
+                    </div>
+
+                    <input type="radio" name="type" value="1" checked class="radio-hide" id="r_temp_1">
+                    <input type="radio" name="type" value="2" class="radio-hide" id="r_temp_2">
+                    <input type="radio" name="type" value="3" class="radio-hide" id="r_temp_3">
+
+                    <div class="label-row">
+                        <label for="r_temp_1" class="active">
+                            <span class="image-block">
+                                <img src="images/jpg/kran-t-1.jpg" alt="">
+                            </span>
+                            <span class="title">Улица</span>
+                        </label>
+                        <label for="r_temp_2">
+                            <span class="image-block">
+                                <img src="images/jpg/kran-t-2.jpg" alt="">
+                            </span>
+                            <span class="title">Навес</span>
+                        </label>
+                        <label for="r_temp_3">
+                            <span class="image-block">
+                                <img src="images/jpg/kran-t-3.jpg" alt="">
+                            </span>
+                            <span class="title">Помещение</span>
+                        </label>
+                    </div>
+
+                </div>
+                <div class="more-row">
+                    <div class="more-text">Применяется в общепромышленных, безопасных зонах.</div>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide-7">
+                <div class="block-title">Крановые пути</div>
+                <div class="main-block">
+                    <input type="radio" name="type" value="1" checked class="radio-hide" id="r_put_1">
+                    <input type="radio" name="type" value="2" class="radio-hide" id="r_put_2">
+
+                    <div class="label-row items-2">
+                        <label for="r_put_1" class="active">
+                            <span class="image-block">
+                                <img src="images/jpg/kran-t-1.jpg" alt="">
+                            </span>
+                            <span class="title">У нас есть крановый путь</span>
+                        </label>
+                        <label for="r_put_2">
+                            <span class="image-block">
+                                <img src="images/jpg/kran-t-1.jpg" alt="">
+                            </span>
+                            <span class="title">Небходима поставка кранового пути</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="more-row">
+                    <div class="more-text">Применяется в общепромышленных, безопасных зонах.</div>
+                    <a href="" class="more-link">
+                        <span>Подробнее</span>
+                        <svg width="46" height="16" viewBox="0 0 46 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M45.7071 8.70711C46.0976 8.31658 46.0976 7.68342 45.7071 7.29289L39.3431 0.928932C38.9526 0.538408 38.3195 0.538408 37.9289 0.928932C37.5384 1.31946 37.5384 1.95262 37.9289 2.34315L43.5858 8L37.9289 13.6569C37.5384 14.0474 37.5384 14.6805 37.9289 15.0711C38.3195 15.4616 38.9526 15.4616 39.3431 15.0711L45.7071 8.70711ZM0 9H45V7H0V9Z" fill="#4B4848"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide-8">
+                <div class="block-title">Модель кранового рельса</div>
+                <div class="main-block">
+                    <input type="radio" name="type" value="1" checked class="radio-hide" id="r_rels_1">
+                    <input type="radio" name="type" value="2" checked class="radio-hide" id="r_rels_2">
+                    <input type="radio" name="type" value="3" checked class="radio-hide" id="r_rels_3">
+                    <input type="radio" name="type" value="4" checked class="radio-hide" id="r_rels_4">
+
+                    <div class="label-row">
+                        <label for="r_rels_1" class="active">
+                            <span class="image-block">
+                                <img src="images/png/kran-rels.png" alt="">
+                            </span>
+                            <span class="title">Рельс Р24</span>
+                        </label>
+                        <label for="r_rels_2" class="">
+                            <span class="image-block">
+                                <img src="images/png/kran-rels.png" alt="">
+                            </span>
+                            <span class="title">Рельс Р24</span>
+                        </label>
+                        <label for="r_rels_3" class="">
+                            <span class="image-block">
+                                <img src="images/png/kran-rels.png" alt="">
+                            </span>
+                            <span class="title">Рельс Р24</span>
+                        </label>
+                        <label for="r_rels_4" class="">
+                            <span class="image-block">
+                                <img src="images/png/kran-rels.png" alt="">
+                            </span>
+                            <span class="title">Рельс Р24</span>
+                        </label>
+                    </div>
+
+                </div>
+                <div class="more-row">
+                    <div class="more-text">Применяется в общепромышленных, безопасных зонах.</div>
+                    <a href="" class="more-link">
+                        <span>Подробнее</span>
+                        <svg width="46" height="16" viewBox="0 0 46 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M45.7071 8.70711C46.0976 8.31658 46.0976 7.68342 45.7071 7.29289L39.3431 0.928932C38.9526 0.538408 38.3195 0.538408 37.9289 0.928932C37.5384 1.31946 37.5384 1.95262 37.9289 2.34315L43.5858 8L37.9289 13.6569C37.5384 14.0474 37.5384 14.6805 37.9289 15.0711C38.3195 15.4616 38.9526 15.4616 39.3431 15.0711L45.7071 8.70711ZM0 9H45V7H0V9Z" fill="#4B4848"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide-9">
+                <div class="block-title">Таль</div>
+                <div class="main-block">
+                    <input type="radio" name="type" value="1" checked class="radio-hide" id="r_tal_1">
+                    <input type="radio" name="type" value="2" class="radio-hide" id="r_tal_2">
+
+                    <div class="label-row r_tal_style items-2">
+                        <label for="r_tal_1" class="active">
+                            <span class="image-block">
+                                <img src="images/png/kran-tal.png" alt="">
+                            </span>
+                            <span class="title">У нас есть</span>
+                        </label>
+                        <label for="r_tal_2">
+                            <span class="image-block">
+                                <img src="images/png/kran-tal.png" class="gray" alt="">
+                            </span>
+                            <span class="title">Требуется</span>
+                        </label>
+                    </div>
+
+                </div>
+                <div class="more-row">
+                    <div class="more-text">Применяется в общепромышленных, безопасных зонах.</div>
+                    <a href="" class="more-link">
+                        <span>Подробнее</span>
+                        <svg width="46" height="16" viewBox="0 0 46 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M45.7071 8.70711C46.0976 8.31658 46.0976 7.68342 45.7071 7.29289L39.3431 0.928932C38.9526 0.538408 38.3195 0.538408 37.9289 0.928932C37.5384 1.31946 37.5384 1.95262 37.9289 2.34315L43.5858 8L37.9289 13.6569C37.5384 14.0474 37.5384 14.6805 37.9289 15.0711C38.3195 15.4616 38.9526 15.4616 39.3431 15.0711L45.7071 8.70711ZM0 9H45V7H0V9Z" fill="#4B4848"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide-10">
+                <div class="block-title">Тип</div>
+                <div class="main-block">
+                    <input type="radio" name="type" value="1" checked class="radio-hide" id="r_tip_1">
+                    <input type="radio" name="type" value="2" class="radio-hide" id="r_tip_2">
+
+                    <div class="label-row r_tal_style items-2">
+                        <label for="r_tip_1" class="active">
+                            <span class="image-block">
+                                <img src="images/png/kran-tal.png" alt="">
+                            </span>
+                            <span class="title">Ручное</span>
+                        </label>
+                        <label for="r_tip_2">
+                            <span class="image-block">
+                                <img src="images/png/kran-tal.png" alt="">
+                            </span>
+                            <span class="title">Электрическое</span>
+                        </label>
+                    </div>
+
+
+                </div>
+
+                <div class="more-row">
+                    <div class="more-text">Применяется в общепромышленных, безопасных зонах.</div>
+                    <a href="" class="more-link">
+                        <span>Подробнее</span>
+                        <svg width="46" height="16" viewBox="0 0 46 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M45.7071 8.70711C46.0976 8.31658 46.0976 7.68342 45.7071 7.29289L39.3431 0.928932C38.9526 0.538408 38.3195 0.538408 37.9289 0.928932C37.5384 1.31946 37.5384 1.95262 37.9289 2.34315L43.5858 8L37.9289 13.6569C37.5384 14.0474 37.5384 14.6805 37.9289 15.0711C38.3195 15.4616 38.9526 15.4616 39.3431 15.0711L45.7071 8.70711ZM0 9H45V7H0V9Z" fill="#4B4848"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide-11">
+                <div class="block-title">Производство</div>
+                <div class="main-block">
+                    <input type="radio" name="type" value="1" checked class="radio-hide" id="r_prz_1">
+                    <input type="radio" name="type" value="2" class="radio-hide" id="r_prz_2">
+
+                    <div class="label-row r_tal_style items-2">
+                        <label for="r_prz_1" class="active">
+                            <span class="image-block">
+                                <img src="images/png/kran-tal.png" alt="">
+                            </span>
+                            <span class="title">Ручное</span>
+                        </label>
+                        <label for="r_prz_2">
+                            <span class="image-block">
+                                <img src="images/png/kran-tal.png" alt="">
+                            </span>
+                            <span class="title">Электрическое</span>
+                        </label>
+                    </div>
+
+
+                </div>
+                <div class="more-row">
+                    <div class="more-text">Применяется в общепромышленных, безопасных зонах.</div>
+                    <a href="" class="more-link">
+                        <span>Подробнее</span>
+                        <svg width="46" height="16" viewBox="0 0 46 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M45.7071 8.70711C46.0976 8.31658 46.0976 7.68342 45.7071 7.29289L39.3431 0.928932C38.9526 0.538408 38.3195 0.538408 37.9289 0.928932C37.5384 1.31946 37.5384 1.95262 37.9289 2.34315L43.5858 8L37.9289 13.6569C37.5384 14.0474 37.5384 14.6805 37.9289 15.0711C38.3195 15.4616 38.9526 15.4616 39.3431 15.0711L45.7071 8.70711ZM0 9H45V7H0V9Z" fill="#4B4848"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide-12">
+                <div class="block-title">Итоговая стоимость</div>
+                <div class="main-block">
+                    <div class="finish-block">
+                        <div class="left-block">
+                            <div class="title">Кран-балка опорная</div>
+                            <div class="img-block"><img src="images/jpg/kran-bg.jpg" alt=""></div>
+                        </div>
+                        <div class="right-block">
+                            <div class="price"><span class="summa">283 860</span> рублей</div>
+                            <a href="" class="btn btn-orange">Сделать заказ</a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <div class="more-row">
+                    <div class="more-text">Применяется в общепромышленных, безопасных зонах.</div>
+                    <a href="" class="more-link">
+                        <span>Подробнее</span>
+                        <svg width="46" height="16" viewBox="0 0 46 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M45.7071 8.70711C46.0976 8.31658 46.0976 7.68342 45.7071 7.29289L39.3431 0.928932C38.9526 0.538408 38.3195 0.538408 37.9289 0.928932C37.5384 1.31946 37.5384 1.95262 37.9289 2.34315L43.5858 8L37.9289 13.6569C37.5384 14.0474 37.5384 14.6805 37.9289 15.0711C38.3195 15.4616 38.9526 15.4616 39.3431 15.0711L45.7071 8.70711ZM0 9H45V7H0V9Z" fill="#4B4848"/>
+                        </svg>
+                    </a>
+                    <div class="last-btns">
+                        <div class="btn btn-white-2 go-first">Изменить параметры</div>
+                        <div class="btn btn-gray" onclick="$.fancybox.close();">Закрыть</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="control">
+        <div class="swiper-button-prev2 btn btn-white">Назад</div>
+        <div class="swiper-button-next2 btn btn-gray">Далее</div>
+    </div>
+
+
+    <div class="swiper-pagination"></div>
+
+</div>
+
+
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/ion.rangeSlider.min.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+    $(function() {
+        var custom_values = [-50, -20, -10, 0, 10, 20, 50];
+
+        var my_from = custom_values.indexOf(-20);
+        var my_to = custom_values.indexOf(20);
+
+        $(".js-range-slider").ionRangeSlider({
+            type: "double",
+            grid: true,
+            from: my_from,
+            to: my_to,
+            values: custom_values
+        });
+    });
+
+
+</script>
+
+</body>
+</html>
