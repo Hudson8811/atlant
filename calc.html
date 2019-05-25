@@ -12,10 +12,13 @@
     <link href="css/jquery.fancybox.css" rel="stylesheet">
     <link href="css/ion.rangeSlider.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/adaptive.css" rel="stylesheet">
+
 </head>
 
 <body>
 
+<div class="bg-overlay hide"></div>
 <header>
     <div class="container">
         <div class="logo-line">
@@ -23,19 +26,38 @@
             <div class="title">Производство кранов <span class="orange">и металлоконструкций</span></div>
         </div>
         <div class="menu-line">
-            <div class="menu-btn menu-item"><img src="images/png/mobile-menu.png" alt=""></div>
+            <div class="menu-btn menu-item border"><img src="images/png/mobile-menu.png" alt=""></div>
             <div class="menu">
                 <a href="" class="menu-item">О компании</a>
                 <a href="" class="menu-item">Услуги</a>
                 <a href="" class="menu-item">Цены</a>
                 <a href="" class="menu-item">Как купить</a>
-                <a href="" class="menu-item border">Сертификаты</a>
+                <a href="" class="menu-item">Сертификаты</a>
                 <a href="" class="menu-item">Контакты</a>
+            </div>
+            <div class="title hide">Производство кранов <span class="orange">и металлоконструкций</span></div>
+            <div class="mobile-menu hide">
+                <div class="left-side close-side">
+                    <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.816406 35.3553L36.1717 8.22544e-06L39.0002 2.82844L3.64483 38.1838L0.816406 35.3553Z" fill="white"/>
+                        <path d="M3.64502 0L39.0004 35.3553L36.1719 38.1838L0.816592 2.82843L3.64502 0Z" fill="white"/>
+                    </svg>
+                </div>
+                <div class="right-side">
+                    <div class="current-page-title">Услуги</div>
+                    <div class="menu-mobile-list">
+                        <a href="" class="menu-item">О компании</a>
+                        <a href="" class="menu-item border">Услуги</a>
+                        <a href="" class="menu-item">Цены</a>
+                        <a href="" class="menu-item">Как купить</a>
+                        <a href="" class="menu-item">Сертификаты</a>
+                        <a href="" class="menu-item">Контакты</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </header>
-
 
 <div class="calc-page">
     <div class="container">
@@ -296,7 +318,8 @@
                     </div>
                 </div>
                 <div class="more-row">
-                    <div class="more-text"><img src="images/svg/warning.svg" alt="">Расстояние от стены до центра рельса не должно быть меньше 350 мм</div>
+                    <div class="more-text" style="display: flex"><img src="images/svg/warning.svg" alt="">
+                        <span>Расстояние от стены до центра рельса не должно быть меньше 350 мм</span></div>
                 </div>
             </div>
 
@@ -538,9 +561,11 @@
 
                 </div>
                 <div class="more-row">
-                    <div class="more-text">Применяется в общепромышленных, безопасных зонах.</div>
+                    <div class="more-text">
+                        По всем возникшим после расчета вопросам обращайтесь в департамент продаж.
+                        </div>
                     <a href="" class="more-link">
-                        <span>Подробнее</span>
+                        <span>Отправить просчет на почту</span>
                         <svg width="46" height="16" viewBox="0 0 46 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M45.7071 8.70711C46.0976 8.31658 46.0976 7.68342 45.7071 7.29289L39.3431 0.928932C38.9526 0.538408 38.3195 0.538408 37.9289 0.928932C37.5384 1.31946 37.5384 1.95262 37.9289 2.34315L43.5858 8L37.9289 13.6569C37.5384 14.0474 37.5384 14.6805 37.9289 15.0711C38.3195 15.4616 38.9526 15.4616 39.3431 15.0711L45.7071 8.70711ZM0 9H45V7H0V9Z" fill="#4B4848"/>
                         </svg>

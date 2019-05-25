@@ -11,10 +11,12 @@
     <link href="css/swiper.min.css" rel="stylesheet">
     <link href="css/jquery.fancybox.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/adaptive.css" rel="stylesheet">
+
 </head>
 
 <body>
-
+<div class="bg-overlay hide"></div>
 <header>
     <div class="container">
         <div class="logo-line">
@@ -22,14 +24,34 @@
             <div class="title">Производство кранов <span class="orange">и металлоконструкций</span></div>
         </div>
         <div class="menu-line">
-            <div class="menu-btn menu-item"><img src="images/png/mobile-menu.png" alt=""></div>
+            <div class="menu-btn menu-item border"><img src="images/png/mobile-menu.png" alt=""></div>
             <div class="menu">
                 <a href="" class="menu-item">О компании</a>
                 <a href="" class="menu-item">Услуги</a>
                 <a href="" class="menu-item">Цены</a>
-                <a href="" class="menu-item border">Как купить</a>
+                <a href="" class="menu-item">Как купить</a>
                 <a href="" class="menu-item">Сертификаты</a>
                 <a href="" class="menu-item">Контакты</a>
+            </div>
+            <div class="title hide">Производство кранов <span class="orange">и металлоконструкций</span></div>
+            <div class="mobile-menu hide">
+                <div class="left-side close-side">
+                    <svg width="39" height="39" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.816406 35.3553L36.1717 8.22544e-06L39.0002 2.82844L3.64483 38.1838L0.816406 35.3553Z" fill="white"/>
+                        <path d="M3.64502 0L39.0004 35.3553L36.1719 38.1838L0.816592 2.82843L3.64502 0Z" fill="white"/>
+                    </svg>
+                </div>
+                <div class="right-side">
+                    <div class="current-page-title">Услуги</div>
+                    <div class="menu-mobile-list">
+                        <a href="" class="menu-item">О компании</a>
+                        <a href="" class="menu-item border">Услуги</a>
+                        <a href="" class="menu-item">Цены</a>
+                        <a href="" class="menu-item">Как купить</a>
+                        <a href="" class="menu-item">Сертификаты</a>
+                        <a href="" class="menu-item">Контакты</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -100,6 +122,17 @@
                             </div>
                         </div>
                     </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="go-top-row hide2">
+            <div class="to-top ver2">
+                <div class="text">Вернуться	наверх</div>
+                <div id="to-top2">
+                    <svg width="24" height="32" viewBox="0 0 24 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.0607 0.939339C12.4749 0.353552 11.5251 0.353552 10.9393 0.939339L1.3934 10.4853C0.807612 11.0711 0.807612 12.0208 1.3934 12.6066C1.97919 13.1924 2.92893 13.1924 3.51472 12.6066L12 4.12132L20.4853 12.6066C21.0711 13.1924 22.0208 13.1924 22.6066 12.6066C23.1924 12.0208 23.1924 11.0711 22.6066 10.4853L13.0607 0.939339ZM13.5 32L13.5 2L10.5 2L10.5 32L13.5 32Z" fill="#C5C5C5"/>
+                    </svg>
                 </div>
             </div>
         </div>

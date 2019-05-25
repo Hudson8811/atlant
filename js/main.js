@@ -31,7 +31,7 @@ $(function() {
         $(this).addClass('active');
     })
 
-    $('#to-top').on('click', function (e) {
+    $('[id^="to-top"]').on('click', function (e) {
         e.preventDefault();
         $('html,body').animate({
             scrollTop: 0
@@ -53,7 +53,15 @@ $(function() {
 
     $('.faq-main-block .toggle-title').on('click', function (e) {
         $(this).toggleClass('active').siblings('.text').slideToggle();
+    });
 
+    $('.menu-line .menu-btn').on('click', function (e) {
+        $('.mobile-menu').addClass('opened');
+        $('.bg-overlay').show();
+    });
+    $('.mobile-menu .close-side').on('click', function (e) {
+        $('.mobile-menu').removeClass('opened');
+        $('.bg-overlay').hide();
     });
 
     $('[data-fancybox="images"]').fancybox({
@@ -116,40 +124,108 @@ $(function() {
             autoStart : false,
             axis      : 'x'
         },
+        afterShow: function( instance, current ) {
+            var swiperCalc = new Swiper('#calc .swiper-container', {
+                effect: 'fade',
+                allowTouchMove: false,
+                touchRatio: 0,
+                pagination: {
+                    el: '#calc .swiper-pagination',
+                    dynamicBullets: true,
+                    clickable: false,
+                    dynamicMainBullets: 1,
+                    renderBullet: function (index, className) {
+                        return '<span class="' + className + '">' + addZero(index + 1) + '</span>';
+                    },
+                },
+                navigation: {
+                    nextEl: '#calc .swiper-button-next2',
+                    prevEl: '#calc .swiper-button-prev2',
+                },
+                on: {
+                    reachEnd: function () {
+                        $('#calc .control').hide();
+                    },
+                },
+                breakpoints: {
+                    999: {
+                        pagination: {
+                            el: '#calc .swiper-pagination',
+                            dynamicBullets: false,
+                            clickable: false,
+                            renderBullet: function (index, className) {
+                                return '<span class="' + className + '">' + addZero(index + 1) + '</span>';
+                            },
+                        },
+
+
+                    },
+                    720: {
+                        autoHeight: true,
+                    },
+                    500: {
+                        autoHeight: true,
+                        pagination: {
+                            el: '#calc .swiper-pagination',
+                            type: 'fraction',
+                            renderFraction: function (currentClass, totalClass) {
+                                return '<span class="' + currentClass + '"></span> <span class="sep"></span>' + '<span class="' + totalClass + '"></span>';
+                            },
+                            formatFractionCurrent: function (number) {
+                                myNum = addZero(number);
+                                return myNum;
+                            },
+                            formatFractionTotal: function (number) {
+                                myNum = addZero(number);
+                                return myNum;
+                            },
+                        },
+                    },
+                }
+            });
+            $('#calc .control').show();
+            $('#calc .slide-1 .cat-menu label').on('click', function (e) {
+                event.preventDefault();
+                var data = $(this).data('id');
+                $('#calc .slide-1 li').removeClass('current');
+                $(this).closest('li').addClass('current');
+                $('#calc .slide-1 img').removeClass('active')
+                $('#calc .slide-1 img[data-id="'+ data +'"]').addClass('active');
+            });
+
+            $('#calc .label-row  label').on('click', function (e) {
+                event.preventDefault();
+                $('#calc .label-row  label').removeClass('active');
+                $(this).addClass('active');
+            });
+
+            $('#calc .slide-5 input').on('focus', function (e) {
+                $(this).closest('.input-item').addClass('active');
+            });
+            $('#calc .slide-5 input').on('focusout', function (e) {
+                $(this).closest('.input-item').removeClass('active');
+            });
+            $('#calc .slide-5 input').bind("change keyup input click", function() {
+                if (this.value.match(/[^0-9]/g)) {
+                    this.value = this.value.replace(/[^0-9]/g, '');
+                }
+            });
+
+            $('#calc .go-first').on("click", function() {
+                swiperCalc.slideTo(0);
+                $('#calc .control').show();
+            });
+        },
+        afterClose: function( instance, current ) {
+            swiperCalc.destroy();
+        },
     });
 
 
-    $('#calc .slide-1 .cat-menu label').on('click', function (e) {
-        event.preventDefault();
-        var data = $(this).data('id');
-        $('#calc .slide-1 li').removeClass('current');
-        $(this).closest('li').addClass('current');
-        $('#calc .slide-1 img').removeClass('active')
-        $('#calc .slide-1 img[data-id="'+ data +'"]').addClass('active');
-    });
 
-    $('#calc .label-row  label').on('click', function (e) {
-        event.preventDefault();
-        $('#calc .label-row  label').removeClass('active');
-        $(this).addClass('active');
-    });
 
-    $('#calc .slide-5 input').on('focus', function (e) {
-        $(this).closest('.input-item').addClass('active');
-    });
-    $('#calc .slide-5 input').on('focusout', function (e) {
-        $(this).closest('.input-item').removeClass('active');
-    });
-    $('#calc .slide-5 input').bind("change keyup input click", function() {
-        if (this.value.match(/[^0-9]/g)) {
-            this.value = this.value.replace(/[^0-9]/g, '');
-        }
-    });
 
-    $('#calc .go-first').on("click", function() {
-        swiperCalc.slideTo(0);
-        $('#calc .control').show();
-    });
+
 
 });
 
@@ -201,6 +277,20 @@ var swiperPartner = new Swiper('.partners-swiper .swiper-container', {
         nextEl: '.partners-swiper .swiper-button-next',
         prevEl: '.partners-swiper .swiper-button-prev',
     },
+    breakpoints: {
+        999: {
+            slidesPerView: 3,
+            slidesPerColumn: 2,
+        },
+        720: {
+            slidesPerView: 2,
+            slidesPerColumn: 2,
+        },
+        450: {
+            slidesPerView: 1,
+            slidesPerColumn: 3,
+        },
+    }
 });
 
 
@@ -230,6 +320,49 @@ var swiperSerts = new Swiper('.serts-swiper .swiper-container', {
         nextEl: '.serts-swiper .swiper-button-next',
         prevEl: '.serts-swiper .swiper-button-prev',
     },
+
+    breakpoints: {
+        999: {
+            slidesPerView: 3,
+            spaceBetween: 26,
+            pagination: {
+                el: '.serts-swiper .swiper-pagination',
+                type: 'fraction',
+                renderFraction: function (currentClass, totalClass) {
+                    return '<span class="' + currentClass + '"></span>' + ' <span class="sep">/</span> ' + '<span class="' + totalClass + '"></span>';
+                },
+                formatFractionCurrent: function (number) {
+                    myNum = number + '-' + (number+2);
+                    return myNum;
+                },
+                formatFractionTotal: function (number) {
+                    myNum = number+2;
+                    return myNum;
+                },
+            },
+        },
+        720: {
+            slidesPerView: 2,
+            spaceBetween: 25,
+            centeredSlides: true,
+            pagination: {
+                el: '.serts-swiper .swiper-pagination',
+                type: 'fraction',
+                renderFraction: function (currentClass, totalClass) {
+                    return '<span class="' + currentClass + '"></span>' + ' <span class="sep">/</span> ' + '<span class="' + totalClass + '"></span>';
+                },
+                formatFractionCurrent: function (number) {
+                    myNum = number;
+                    return myNum;
+                },
+                formatFractionTotal: function (number) {
+                    myNum = number;
+                    return myNum;
+                },
+            },
+        }
+
+    }
 });
 
 
@@ -238,28 +371,4 @@ function addZero(n) {
     return x.length > 1 ? n : (+n > 0) ? "0" + n : n;
 }
 
-
-var swiperCalc = new Swiper('#calc .swiper-container', {
-    effect: 'fade',
-    allowTouchMove: false,
-    touchRatio: 0,
-    pagination: {
-        el: '#calc .swiper-pagination',
-        dynamicBullets: true,
-        clickable: false,
-        dynamicMainBullets: 1,
-        renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + addZero(index + 1) + '</span>';
-        },
-    },
-    navigation: {
-        nextEl: '#calc .swiper-button-next2',
-        prevEl: '#calc .swiper-button-prev2',
-    },
-    on: {
-        reachEnd: function () {
-            $('#calc .control').hide();
-        },
-    }
-});
 
